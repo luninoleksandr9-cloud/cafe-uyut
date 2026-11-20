@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Кафе «Уют»</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <div class="logo">☕</div>
+      <div>
+        <h1>Кафе «Уют»</h1>
+        <small>Кафе</small>
+      </div>
+    </div>
+    <div class="actions">
+      <select class="hbtn lang" id="lang" onchange="setLang(this.value)" aria-label="Язык">
+        <option value="uk">UK</option>
+        <option value="ru">RU</option>
+        <option value="en">EN</option>
+      </select>
+      <button class="hbtn" onclick="openMenu()" aria-label="Профиль">👤</button>
+      <button class="hbtn" onclick="openMenu()" aria-label="Меню">☰</button>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <a class="active" href="#menu">Меню</a>
+    <a href="#contacts">Бронирование</a>
+    <a href="#contacts">Контакты</a>
+  </nav>
+
+  <div class="hero">
+    <div class="script">Уют</div>
+    <div class="line"></div>
+    <p>КОФЕ • ВЫПЕЧКА • ОБЩЕНИЕ</p>
+  </div>
+
+  <div class="layout">
+
+    <aside class="left">
+      <p class="label">Меню:</p>
+      <a href="#soups">🍲 Супы</a>
+      <a href="#pures">🥔 Пюре</a>
+      <a href="#pasta">🍝 Пасты</a>
+      <a href="#salads">🥗 Салаты</a>
+      <a href="#desserts">🍰 Десерты</a>
+      <a href="#drinks">☕ Напитки</a>
+    </aside>
+
+    <main class="center" id="menu">
+      <div class="notice">🕒 Работаем ежедневно с 8:00 до 22:00</div>
+
+      <h2 id="soups">Супы</h2>
+      <div class="dish"><div class="info"><h3>Борщ с говядиной</h3><b>140 ₴</b><p>Классический борщ со сметаной и зеленью. 350 г</p></div><div class="pic">🍲</div></div>
+      <div class="dish"><div class="info"><h3>Крем-суп из тыквы</h3><b>130 ₴</b><p>Нежный суп со сливками и тыквенными семечками. 300 г</p></div><div class="pic">🎃</div></div>
+      <div class="dish"><div class="info"><h3>Грибной крем-суп</h3><b>150 ₴</b><p>Шампиньоны, сливки и гренки. 300 г</p></div><div class="pic">🍄</div></div>
+      <div class="dish"><div class="info"><h3>Куриный бульон</h3><b>110 ₴</b><p>Прозрачный бульон с лапшой и яйцом. 350 г</p></div><div class="pic">🍜</div></div>
+      <div class="dish"><div class="info"><h3>Том-ям с креветками</h3><b>260 ₴</b><p>Острый тайский суп на кокосовом молоке. 350 г</p></div><div class="pic">🦐</div></div>
+
+      <h2 id="pures">Пюре</h2>
+      <div class="dish"><div class="info"><h3>Картофельное пюре</h3><b>80 ₴</b><p>На сливочном масле и молоке. 200 г</p></div><div class="pic">🥔</div></div>
+      <div class="dish"><div class="info"><h3>Пюре из цветной капусты</h3><b>95 ₴</b><p>Лёгкое, со сливками и мускатным орехом. 200 г</p></div><div class="pic">🥦</div></div>
+      <div class="dish"><div class="info"><h3>Пюре из батата</h3><b>110 ₴</b><p>Сладкий картофель с корицей. 200 г</p></div><div class="pic">🍠</div></div>
+      <div class="dish"><div class="info"><h3>Гороховое пюре</h3><b>90 ₴</b><p>С жареным луком и зеленью. 200 г</p></div><div class="pic">🫛</div></div>
+
+      <h2 id="pasta">Пасты</h2>
+      <div class="dish"><div class="info"><h3>Карбонара</h3><b>210 ₴</b><p>Спагетти, бекон, желток и пармезан. 320 г</p></div><div class="pic">🍝</div></div>
+      <div class="dish"><div class="info"><h3>Болоньезе</h3><b>200 ₴</b><p>Спагетти с мясным соусом из томатов. 330 г</p></div><div class="pic">🍝</div></div>
+      <div class="dish"><div class="info"><h3>Альфредо с курицей</h3><b>220 ₴</b><p>Феттуччине в сливочном соусе с пармезаном. 330 г</p></div><div class="pic">🍗</div></div>
+      <div class="dish"><div class="info"><h3>Паста с морепродуктами</h3><b>290 ₴</b><p>Креветки, мидии и кальмары в томатном соусе. 340 г</p></div><div class="pic">🦑</div></div>
+      <div class="dish"><div class="info"><h3>Паста с песто</h3><b>190 ₴</b><p>Базиликовый песто, кедровые орехи, томаты черри. 300 г</p></div><div class="pic">🌿</div></div>
+
+      <h2 id="salads">Салаты</h2>
+      <div class="dish"><div class="info"><h3>Цезарь с курицей</h3><b>190 ₴</b><p>Ромэн, куриное филе, пармезан, соус цезарь. 250 г</p></div><div class="pic">🥗</div></div>
+      <div class="dish"><div class="info"><h3>Греческий салат</h3><b>160 ₴</b><p>Овощи, оливки и сыр фета. 230 г</p></div><div class="pic">🫒</div></div>
+
+      <h2 id="desserts">Десерты</h2>
+      <div class="dish"><div class="info"><h3>Чизкейк</h3><b>120 ₴</b><p>Нью-Йорк с ягодным соусом. 130 г</p></div><div class="pic">🍰</div></div>
+      <div class="dish"><div class="info"><h3>Круассан</h3><b>70 ₴</b><p>Свежий, с миндальным кремом. 90 г</p></div><div class="pic">🥐</div></div>
+      <div class="dish"><div class="info"><h3>Тирамису</h3><b>135 ₴</b><p>Маскарпоне, кофе и савоярди. 140 г</p></div><div class="pic">🍮</div></div>
+
+      <h2 id="drinks">Напитки</h2>
+      <div class="dish"><div class="info"><h3>Эспрессо</h3><b>50 ₴</b><p>Двойной шот свежей обжарки. 60 мл</p></div><div class="pic">☕</div></div>
+      <div class="dish"><div class="info"><h3>Капучино</h3><b>75 ₴</b><p>Эспрессо и молочная пенка. 250 мл</p></div><div class="pic">🥛</div></div>
+      <div class="dish"><div class="info"><h3>Лимонад домашний</h3><b>85 ₴</b><p>Лимон, мята, лёд. 400 мл</p></div><div class="pic">🍋</div></div>
+    </main>
+
+    <aside class="right" id="contacts">
+      <p class="label">Информация о заведении</p>
+      <div class="box"><span>📶</span><div><small>WiFi:</small><br><b>Uyut12345</b></div></div>
+      <div class="box"><span>🕒</span><div><small>Рабочее время:</small><br><b>8:00 - 22:00</b></div></div>
+      <div class="box"><span>📍</span><div><small>Адрес:</small><br><b>ул. Центральная, 5</b></div></div>
+      <div class="box"><span>📞</span><div><small>Телефон:</small><br><a href="tel:+380441234567"><b>+380 44 123-45-67</b></a></div></div>
+
+      <div class="messengers">
+        <a class="msg tg" href="https://t.me/ваш_username">Telegram</a>
+        <a class="msg vb" href="viber://chat?number=%2B380501234567">Viber</a>
+      </div>
+
+      <a class="book" href="tel:+380441234567">Забронировать столик</a>
+    </aside>
+
+  </div>
+
+  <div class="drawer-wrap" id="drawer">
+    <div class="shade" onclick="closeMenu()">
+      <button class="close" aria-label="Закрыть">✕</button>
+    </div>
+
+    <aside class="drawer">
+      <a class="row-card login" href="#">
+        <span class="ico-sq">👤</span>
+        <b>Авторизуйтесь</b>
+        <span class="arrow">›</span>
+      </a>
+      <div class="row-card note"><b>Авторизуйтесь</b>, чтобы упростить процесс заказа и пользоваться дополнительными функциями.</div>
+
+      <p class="sec">Контакты</p>
+      <a class="item" href="https://maps.google.com/?q=ул.+Центральная+5" target="_blank"><span class="ico">📍</span><span class="txt">ул. Центральная, 5</span><span class="ext">↗</span></a>
+      <a class="item" href="tel:+380441234567"><span class="ico">📞</span><span class="txt">+380 44 123-45-67</span></a>
+      <a class="item" href="mailto:cafe@example.com"><span class="ico">✉️</span><span class="txt">cafe@example.com</span></a>
+      <a class="item" href="#" target="_blank"><span class="ico">🌐</span><span class="txt">Заходите на наш сайт</span><span class="ext">↗</span></a>
+
+      <p class="sec">Мы в соцсетях</p>
+      <a class="item" href="#" target="_blank"><span class="ico">📷</span><span class="txt">Instagram</span><span class="ext">↗</span></a>
+      <a class="item" href="#" target="_blank"><span class="ico">🔍</span><span class="txt">Google</span><span class="ext">↗</span></a>
+      <a class="item" href="#" target="_blank"><span class="ico">📘</span><span class="txt">Facebook</span><span class="ext">↗</span></a>
+      <a class="item" href="https://t.me/ваш_username" target="_blank"><span class="ico">✈️</span><span class="txt">Telegram</span><span class="ext">↗</span></a>
+      <a class="item" href="#" target="_blank"><span class="ico">🎵</span><span class="txt">TikTok</span><span class="ext">↗</span></a>
+
+      <p class="sec">Полезная информация</p>
+      <a class="item" href="#"><span class="ico">⚠️</span><span class="txt">Список аллергенов</span><span class="arrow">›</span></a>
+      <a class="item" href="#"><span class="ico">ℹ️</span><span class="txt">Информация о компании</span><span class="arrow">›</span></a>
+      <a class="item" href="#"><span class="ico">📄</span><span class="txt">Политика cookie</span><span class="arrow">›</span></a>
+      <a class="item" href="#"><span class="ico">📄</span><span class="txt">Условия пользования</span><span class="arrow">›</span></a>
+      <a class="item" href="#"><span class="ico">📄</span><span class="txt">Политика конфиденциальности</span><span class="arrow">›</span></a>
+    </aside>
+  </div>
+
+  <script src="lang.js"></script>
+</body>
+</html>
