@@ -4,17 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Кафе «Уют»</title>
+  <meta name="description" content="Кафе «Уют»: свежий кофе, супы, пасты и десерты. Меню, адрес и бронирование столика.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="top">
-    <div class="brand">
-      <div class="logo">☕</div>
-      <div>
-        <h1>Кафе «Уют»</h1>
-        <small>Кафе</small>
-      </div>
+
+  <div id="loader">
+    <div class="lg">
+      <svg viewBox="0 0 120 120"><circle class="lg-arc" cx="60" cy="60" r="54"/></svg>
+      <div class="lg-circle">☕</div>
     </div>
+  </div>
+
+  <header class="top">
+    <a class="brand" href="#home">
+      <div class="logo">☕</div>
+      <div><h1>Кафе «Уют»</h1><small>Кафе</small></div>
+    </a>
+    <nav class="nav">
+      <a href="#menu">Меню</a>
+      <a href="#about">О нас</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#contacts">Контакты</a>
+      <a class="pill" href="#contacts">Забронировать</a>
+    </nav>
     <div class="actions">
       <select class="hbtn lang" id="lang" onchange="setLang(this.value)" aria-label="Язык">
         <option value="uk">UK</option>
@@ -26,90 +39,138 @@
     </div>
   </header>
 
-  <nav class="tabs">
-    <a class="active" href="#menu">Меню</a>
-    <a href="#contacts">Бронирование</a>
-    <a href="#contacts">Контакты</a>
-  </nav>
-
-  <div class="hero">
+  <section class="hero" id="home">
+    <span class="leaf l1">🌿</span><span class="leaf l2">🌿</span>
     <div class="script">Уют</div>
-    <div class="line"></div>
-    <p>КОФЕ • ВЫПЕЧКА • ОБЩЕНИЕ</p>
-  </div>
+    <p class="sub">КАФЕ • ВЫПЕЧКА • ОБЩЕНИЕ</p>
+    <div class="plate">🍝</div>
+    <div class="btns">
+      <a class="btn red" href="#menu">Перейти к меню</a>
+      <a class="btn line-btn" href="#contacts">Забронировать стол</a>
+    </div>
+  </section>
 
-  <div class="layout">
+  <main>
+    <section class="wrap" id="menu">
+      <h2 class="title reveal">Наше меню</h2>
+      <p class="muted reveal">Цены указаны в гривнах, вес порции в граммах</p>
 
-    <aside class="left">
-      <p class="label">Меню:</p>
-      <a href="#soups">🍲 Супы</a>
-      <a href="#pures">🥔 Пюре</a>
-      <a href="#pasta">🍝 Пасты</a>
-      <a href="#salads">🥗 Салаты</a>
-      <a href="#desserts">🍰 Десерты</a>
-      <a href="#drinks">☕ Напитки</a>
-    </aside>
+      <nav class="chips">
+        <a href="#soups">🍲 Супы</a>
+        <a href="#pures">🥔 Пюре</a>
+        <a href="#pasta">🍝 Пасты</a>
+        <a href="#salads">🥗 Салаты</a>
+        <a href="#desserts">🍰 Десерты</a>
+        <a href="#drinks">☕ Напитки</a>
+      </nav>
 
-    <main class="center" id="menu">
-      <div class="notice">🕒 Работаем ежедневно с 8:00 до 22:00</div>
-
-      <h2 id="soups">Супы</h2>
-      <div class="dish"><div class="info"><h3>Борщ с говядиной</h3><b>140 ₴</b><p>Классический борщ со сметаной и зеленью. 350 г</p></div><div class="pic">🍲</div></div>
-      <div class="dish"><div class="info"><h3>Крем-суп из тыквы</h3><b>130 ₴</b><p>Нежный суп со сливками и тыквенными семечками. 300 г</p></div><div class="pic">🎃</div></div>
-      <div class="dish"><div class="info"><h3>Грибной крем-суп</h3><b>150 ₴</b><p>Шампиньоны, сливки и гренки. 300 г</p></div><div class="pic">🍄</div></div>
-      <div class="dish"><div class="info"><h3>Куриный бульон</h3><b>110 ₴</b><p>Прозрачный бульон с лапшой и яйцом. 350 г</p></div><div class="pic">🍜</div></div>
-      <div class="dish"><div class="info"><h3>Том-ям с креветками</h3><b>260 ₴</b><p>Острый тайский суп на кокосовом молоке. 350 г</p></div><div class="pic">🦐</div></div>
-
-      <h2 id="pures">Пюре</h2>
-      <div class="dish"><div class="info"><h3>Картофельное пюре</h3><b>80 ₴</b><p>На сливочном масле и молоке. 200 г</p></div><div class="pic">🥔</div></div>
-      <div class="dish"><div class="info"><h3>Пюре из цветной капусты</h3><b>95 ₴</b><p>Лёгкое, со сливками и мускатным орехом. 200 г</p></div><div class="pic">🥦</div></div>
-      <div class="dish"><div class="info"><h3>Пюре из батата</h3><b>110 ₴</b><p>Сладкий картофель с корицей. 200 г</p></div><div class="pic">🍠</div></div>
-      <div class="dish"><div class="info"><h3>Гороховое пюре</h3><b>90 ₴</b><p>С жареным луком и зеленью. 200 г</p></div><div class="pic">🫛</div></div>
-
-      <h2 id="pasta">Пасты</h2>
-      <div class="dish"><div class="info"><h3>Карбонара</h3><b>210 ₴</b><p>Спагетти, бекон, желток и пармезан. 320 г</p></div><div class="pic">🍝</div></div>
-      <div class="dish"><div class="info"><h3>Болоньезе</h3><b>200 ₴</b><p>Спагетти с мясным соусом из томатов. 330 г</p></div><div class="pic">🍝</div></div>
-      <div class="dish"><div class="info"><h3>Альфредо с курицей</h3><b>220 ₴</b><p>Феттуччине в сливочном соусе с пармезаном. 330 г</p></div><div class="pic">🍗</div></div>
-      <div class="dish"><div class="info"><h3>Паста с морепродуктами</h3><b>290 ₴</b><p>Креветки, мидии и кальмары в томатном соусе. 340 г</p></div><div class="pic">🦑</div></div>
-      <div class="dish"><div class="info"><h3>Паста с песто</h3><b>190 ₴</b><p>Базиликовый песто, кедровые орехи, томаты черри. 300 г</p></div><div class="pic">🌿</div></div>
-
-      <h2 id="salads">Салаты</h2>
-      <div class="dish"><div class="info"><h3>Цезарь с курицей</h3><b>190 ₴</b><p>Ромэн, куриное филе, пармезан, соус цезарь. 250 г</p></div><div class="pic">🥗</div></div>
-      <div class="dish"><div class="info"><h3>Греческий салат</h3><b>160 ₴</b><p>Овощи, оливки и сыр фета. 230 г</p></div><div class="pic">🫒</div></div>
-
-      <h2 id="desserts">Десерты</h2>
-      <div class="dish"><div class="info"><h3>Чизкейк</h3><b>120 ₴</b><p>Нью-Йорк с ягодным соусом. 130 г</p></div><div class="pic">🍰</div></div>
-      <div class="dish"><div class="info"><h3>Круассан</h3><b>70 ₴</b><p>Свежий, с миндальным кремом. 90 г</p></div><div class="pic">🥐</div></div>
-      <div class="dish"><div class="info"><h3>Тирамису</h3><b>135 ₴</b><p>Маскарпоне, кофе и савоярди. 140 г</p></div><div class="pic">🍮</div></div>
-
-      <h2 id="drinks">Напитки</h2>
-      <div class="dish"><div class="info"><h3>Эспрессо</h3><b>50 ₴</b><p>Двойной шот свежей обжарки. 60 мл</p></div><div class="pic">☕</div></div>
-      <div class="dish"><div class="info"><h3>Капучино</h3><b>75 ₴</b><p>Эспрессо и молочная пенка. 250 мл</p></div><div class="pic">🥛</div></div>
-      <div class="dish"><div class="info"><h3>Лимонад домашний</h3><b>85 ₴</b><p>Лимон, мята, лёд. 400 мл</p></div><div class="pic">🍋</div></div>
-    </main>
-
-    <aside class="right" id="contacts">
-      <p class="label">Информация о заведении</p>
-      <div class="box"><span>📶</span><div><small>WiFi:</small><br><b>Uyut12345</b></div></div>
-      <div class="box"><span>🕒</span><div><small>Рабочее время:</small><br><b>8:00 - 22:00</b></div></div>
-      <div class="box"><span>📍</span><div><small>Адрес:</small><br><b>ул. Центральная, 5</b></div></div>
-      <div class="box"><span>📞</span><div><small>Телефон:</small><br><a href="tel:+380441234567"><b>+380 44 123-45-67</b></a></div></div>
-
-      <div class="messengers">
-        <a class="msg tg" href="https://t.me/ваш_username">Telegram</a>
-        <a class="msg vb" href="viber://chat?number=%2B380501234567">Viber</a>
+      <h3 class="cat reveal" id="soups">Супы</h3>
+      <div class="grid">
+        <div class="dish reveal"><div class="pic"><img src="borsch.jpg" alt="Борщ с говядиной" loading="lazy"></div><div class="info"><h4>Борщ с говядиной</h4><p>Классический борщ со сметаной и зеленью</p><div class="meta"><span class="price">140 ₴</span><span class="wt">350 г</span></div></div></div>
+        <div class="dish reveal"><div class="pic"><img src="tykva.jpg" alt="Крем-суп из тыквы" loading="lazy"></div><div class="info"><h4>Крем-суп из тыквы</h4><p>Нежный суп со сливками и тыквенными семечками</p><div class="meta"><span class="price">130 ₴</span><span class="wt">300 г</span></div></div></div>
+        <div class="dish reveal"><div class="pic"><img src="gribnoy.jpg" alt="Грибной крем-суп" loading="lazy"></div><div class="info"><h4>Грибной крем-суп</h4><p>Шампиньоны, сливки и гренки</p><div class="meta"><span class="price">150 ₴</span><span class="wt">300 г</span></div></div></div>
+        <div class="dish reveal"><div class="pic"><img src="bulyon.jpg" alt="Куриный бульон" loading="lazy"></div><div class="info"><h4>Куриный бульон</h4><p>Прозрачный бульон с лапшой и яйцом</p><div class="meta"><span class="price">110 ₴</span><span class="wt">350 г</span></div></div></div>
+        <div class="dish reveal"><div class="pic"><img src="tomyam.jpg" alt="Том-ям с креветками" loading="lazy"></div><div class="info"><h4>Том-ям с креветками</h4><p>Острый тайский суп на кокосовом молоке</p><div class="meta"><span class="price">260 ₴</span><span class="wt">350 г</span></div></div></div>
       </div>
 
-      <a class="book" href="tel:+380441234567">Забронировать столик</a>
-    </aside>
+      <h3 class="cat reveal" id="pures">Пюре</h3>
+      <div class="grid">
+        <div class="dish reveal"><div class="pic">🥔</div><div class="info"><h4>Картофельное пюре</h4><p>На сливочном масле и молоке</p><div class="meta"><span class="price">80 ₴</span><span class="wt">200 г</span></div></div></div>
+        <div class="dish reveal"><div class="pic">🥦</div><div class="info"><h4>Пюре из цветной капусты</h4><p>Лёгкое, со сливками и мускатным орехом</p><div class="meta"><span class="price">95 ₴</span><span class="wt">200 г</span></div></div></div>
+        <div class="dish reveal"><div class="pic">🍠</div><div class="info"><h4>Пюре из батата</h4><p>Сладкий картофель с корицей</p><div class="meta"><span class="price">110 ₴</span><span class="wt">200 г</span></div></div></div>
+        <div class="dish reveal"><div class="pic">🫛</div><div class="info"><h4>Гороховое пюре</h4><p>С жареным луком и зеленью</p><div class="meta"><span class="price">90 ₴</span><span class="wt">200 г</span></div></div></div>
+      </div>
 
-  </div>
+      <h3 class="cat reveal" id="pasta">Пасты</h3>
+      <div class="grid">
+        <div class="dish reveal"><div class="pic">🍝</div><div class="info"><h4>Карбонара</h4><p>Спагетти, бекон, желток и пармезан</p><div class="meta"><span class="price">210 ₴</span><span class="wt">320 г</span></div></div></div>
+        <div class="dish reveal"><div class="pic">🍝</div><div class="info"><h4>Болоньезе</h4><p>Спагетти с мясным соусом из томатов</p><div class="meta"><span class="price">200 ₴</span><span class="wt">330 г</span></div></div></div>
+        <div class="dish reveal"><div class="pic">🍗</div><div class="info"><h4>Альфредо с курицей</h4><p>Феттуччине в сливочном соусе с пармезаном</p><div class="meta"><span class="price">220 ₴</span><span class="wt">330 г</span></div></div></div>
+        <div class="dish reveal"><div class="pic">🦑</div><div class="info"><h4>Паста с морепродуктами</h4><p>Креветки, мидии и кальмары в томатном соусе</p><div class="meta"><span class="price">290 ₴</span><span class="wt">340 г</span></div></div></div>
+        <div class="dish reveal"><div class="pic">🌿</div><div class="info"><h4>Паста с песто</h4><p>Базиликовый песто, кедровые орехи, томаты черри</p><div class="meta"><span class="price">190 ₴</span><span class="wt">300 г</span></div></div></div>
+      </div>
+
+      <h3 class="cat reveal" id="salads">Салаты</h3>
+      <div class="grid">
+        <div class="dish reveal"><div class="pic">🥗</div><div class="info"><h4>Цезарь с курицей</h4><p>Ромэн, куриное филе, пармезан, соус цезарь</p><div class="meta"><span class="price">190 ₴</span><span class="wt">250 г</span></div></div></div>
+        <div class="dish reveal"><div class="pic">🫒</div><div class="info"><h4>Греческий салат</h4><p>Овощи, оливки и сыр фета</p><div class="meta"><span class="price">160 ₴</span><span class="wt">230 г</span></div></div></div>
+      </div>
+
+      <h3 class="cat reveal" id="desserts">Десерты</h3>
+      <div class="grid">
+        <div class="dish reveal"><div class="pic">🍰</div><div class="info"><h4>Чизкейк</h4><p>Нью-Йорк с ягодным соусом</p><div class="meta"><span class="price">120 ₴</span><span class="wt">130 г</span></div></div></div>
+        <div class="dish reveal"><div class="pic">🥐</div><div class="info"><h4>Круассан</h4><p>Свежий, с миндальным кремом</p><div class="meta"><span class="price">70 ₴</span><span class="wt">90 г</span></div></div></div>
+        <div class="dish reveal"><div class="pic">🍮</div><div class="info"><h4>Тирамису</h4><p>Маскарпоне, кофе и савоярди</p><div class="meta"><span class="price">135 ₴</span><span class="wt">140 г</span></div></div></div>
+      </div>
+
+      <h3 class="cat reveal" id="drinks">Напитки</h3>
+      <div class="grid">
+        <div class="dish reveal"><div class="pic">☕</div><div class="info"><h4>Эспрессо</h4><p>Двойной шот свежей обжарки</p><div class="meta"><span class="price">50 ₴</span><span class="wt">60 мл</span></div></div></div>
+        <div class="dish reveal"><div class="pic">🥛</div><div class="info"><h4>Капучино</h4><p>Эспрессо и молочная пенка</p><div class="meta"><span class="price">75 ₴</span><span class="wt">250 мл</span></div></div></div>
+        <div class="dish reveal"><div class="pic">🍋</div><div class="info"><h4>Лимонад домашний</h4><p>Лимон, мята, лёд</p><div class="meta"><span class="price">85 ₴</span><span class="wt">400 мл</span></div></div></div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="band-in reveal">
+        <h2>Когда хочется чего-то особенного</h2>
+        <p>Вечер с близкими, вкусный ужин и тёплая атмосфера. Мы позаботимся обо всём.</p>
+        <a class="btn red" href="#contacts">Забронировать столик</a>
+      </div>
+    </section>
+
+    <section class="wrap split" id="about">
+      <div class="big-pic reveal">☕🥐</div>
+      <div class="reveal">
+        <h2 class="title left">Без компромиссов в качестве</h2>
+        <p>Мы используем свежие продукты, проверенные рецепты и варим кофе из свежеобжаренных зёрен. Каждое блюдо готовим просто и с душой.</p>
+      </div>
+    </section>
+
+    <section class="wrap" id="gallery">
+      <h2 class="title reveal">Атмосфера, которую хочется почувствовать</h2>
+      <div class="gal">
+        <div class="tile reveal">🥐</div><div class="tile reveal">🍰</div><div class="tile reveal">☕</div>
+        <div class="tile reveal">🍝</div><div class="tile reveal">🥗</div><div class="tile reveal">🍲</div>
+      </div>
+    </section>
+
+    <section class="wrap" id="contacts">
+      <h2 class="title reveal">Контакты</h2>
+      <div class="cards">
+        <div class="box reveal"><span>📍</span><div><small>Адрес:</small><br><b>ул. Центральная, 5</b></div></div>
+        <div class="box reveal"><span>🕒</span><div><small>Рабочее время:</small><br><b>8:00 - 22:00</b></div></div>
+        <div class="box reveal"><span>📞</span><div><small>Телефон:</small><br><a href="tel:+380441234567"><b>+380 44 123-45-67</b></a></div></div>
+        <div class="box reveal"><span>📶</span><div><small>WiFi:</small><br><b>Uyut12345</b></div></div>
+      </div>
+      <div class="btns reveal">
+        <a class="msg tg" href="https://t.me/ваш_username">Telegram</a>
+        <a class="msg vb" href="viber://chat?number=%2B380501234567">Viber</a>
+        <a class="msg map" href="https://maps.google.com/?q=ул.+Центральная+5" target="_blank">Открыть на карте</a>
+      </div>
+    </section>
+
+    <section class="finale">
+      <div class="sign reveal">
+        <div class="script big">Уют</div>
+        <div class="sline"></div>
+        <p class="sub">КАФЕ • ВЫПЕЧКА • ОБЩЕНИЕ</p>
+      </div>
+      <div class="story reveal">
+        <h2 class="title">Наша история</h2>
+        <p>Кафе «Уют» началось с маленькой кухни и большой любви к кофе. Всё придумали двое друзей, которые мечтали о месте, где можно просто зайти погреться, поговорить и никуда не торопиться.</p>
+        <p>Сначала у нас было три столика и одна кофемашина. Мы пекли булочки по бабушкиным рецептам, а гости быстро стали друзьями. Так появились супы, пасты и десерты, которыми мы теперь гордимся.</p>
+        <p>Сегодня «Уют» это место, куда возвращаются. Приходите, мы вам рады.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Кафе «Уют»</footer>
 
   <div class="drawer-wrap" id="drawer">
     <div class="shade" onclick="closeMenu()">
       <button class="close" aria-label="Закрыть">✕</button>
     </div>
-
     <aside class="drawer">
       <a class="row-card login" href="#">
         <span class="ico-sq">👤</span>
